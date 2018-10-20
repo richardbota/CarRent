@@ -25,7 +25,6 @@ namespace CarRent.Controllers
 
         //
         // GET: /Student/Details/5
-
         public ViewResult Details(int id)
         {
             Vehicle vehicle = _vehicleRepository.GetVehicleByID(id);
