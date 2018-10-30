@@ -16,16 +16,16 @@ namespace CarRent.Controllers
 
         // GET: Vehicles
         public IActionResult Index()
+
         {
             var vehicles = from v in _vehicleRepository.GetAllVehicles()
                            select v;
 
-            return View(vehicles.ToList());
+            return View(vehicles);
         }
 
-        //
         // GET: /Student/Details/5
-        public ViewResult Details(int id)
+        public IActionResult Details(int id)
         {
             Vehicle vehicle = _vehicleRepository.GetVehicleByID(id);
             return View(vehicle);
