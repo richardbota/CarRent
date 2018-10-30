@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRent", "CarRent\CarRent.csproj", "{75B88FA9-6AA2-48E3-8D37-8E5524803F24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRent", "CarRent\CarRent.csproj", "{75B88FA9-6AA2-48E3-8D37-8E5524803F24}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRent.Tests", "CarRent.Tests\CarRent.Tests.csproj", "{B862EE97-A06E-4DBF-9B1C-9CBA666E3F79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{75B88FA9-6AA2-48E3-8D37-8E5524803F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75B88FA9-6AA2-48E3-8D37-8E5524803F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75B88FA9-6AA2-48E3-8D37-8E5524803F24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B862EE97-A06E-4DBF-9B1C-9CBA666E3F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B862EE97-A06E-4DBF-9B1C-9CBA666E3F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B862EE97-A06E-4DBF-9B1C-9CBA666E3F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B862EE97-A06E-4DBF-9B1C-9CBA666E3F79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

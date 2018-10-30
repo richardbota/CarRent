@@ -12,7 +12,7 @@ namespace CarRent.Models.Vehicles
             _appDbContext = appDbContext;
         }
 
-        public object Vehicle => throw new System.NotImplementedException();
+        public object Vehicle => new Vehicle();
 
         public void AddVehicle(Vehicle vehicle)
         {
