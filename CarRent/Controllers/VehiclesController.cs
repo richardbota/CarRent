@@ -16,6 +16,7 @@ namespace CarRent.Controllers
 
         // GET: Vehicles
         public IActionResult Index()
+
         {
             var vehicles = from v in _vehicleRepository.GetAllVehicles()
                            select v;
@@ -23,7 +24,6 @@ namespace CarRent.Controllers
             return View(vehicles);
         }
 
-        //
         // GET: /Student/Details/5
         public IActionResult Details(int id)
         {

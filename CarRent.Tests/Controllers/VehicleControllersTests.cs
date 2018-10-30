@@ -7,7 +7,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using CarRent.ViewModels;
 
-namespace CarRent.Tests.Models.Vehicles
+namespace CarRent.Tests.Controllers
 {
     public class VehicleRepositoryTests
     {
@@ -32,7 +32,7 @@ namespace CarRent.Tests.Models.Vehicles
         }
 
         [Fact]
-        public void Index_should_get_all_vehicles()
+        public void Index_returns_view_with_all_vehicles()
         {
             //Arrange
             var cars = new List<Vehicle>
@@ -63,15 +63,16 @@ namespace CarRent.Tests.Models.Vehicles
 
             //Act
             var result = Assert.IsType<ViewResult>(controller.Index());
-
-            //Assert
             var model = Assert.IsAssignableFrom<IEnumerable<Vehicle>>
                 (result.ViewData.Model);
+
+            //Assert
+            Assert.NotNull(result);
             Assert.Equal(2, model.Count());
         }
 
         [Fact]
-        public void Details()
+        public void Details_returns_view_by_ID()
         {
             //Arrange
             mockVehicleRepository = new Mock<IVehicleRepository>();
@@ -91,5 +92,25 @@ namespace CarRent.Tests.Models.Vehicles
             var model = Assert.IsType<Vehicle>(result.Model);
             Assert.Equal("BMW", model.MakeName);
         }
+
+        [Fact]
+        public void Create_returns_View()
+        {
+            //Arrange
+            mockVehicleRepository = new Mock<IVehicleRepository>();
+            controller = new VehiclesController(mockVehicleRepository.Object);
+
+            //Act
+            var result = controller.Create() as ViewResult;
+
+            //Assert
+            Assert.NotNull(result);
+        }
+
+        //TODO: Create post test
+        //TODO: Edit test
+        //TODO: Edit post test
+        //TODO: Delete test
+        //TODO: Delete confirmed test
     }
 }
